@@ -1,3 +1,13 @@
+/* @media (max-width: 1024px) {
+    #
+  }
+  @media (max-width: 720px) {
+    #
+  }
+  @media (max-width: 540px) {
+    #
+  } */
+
 .logo {
 width: 50px;
 height: 50px;    
@@ -9,10 +19,15 @@ height: 50px;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    z-index: 1;
+    
 }
 
 body{
@@ -73,8 +88,10 @@ button:hover {
     width: 500px;
 }
 .about__sun__images {
+    position: absolute;
     width: 100px;
     height: 100px;
+
 }
 
 .about__h1{
@@ -210,4 +227,17 @@ justify-content: space-evenly;
     margin-top: 40px;
     text-align: center;
     opacity: 0.5;
+}
+
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to {transform: rotate(360deg); }
+}
+
+.about__sun__images:hover {
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
 }
